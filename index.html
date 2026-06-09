@@ -1,18 +1,249 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-  <meta charset="UTF-8">
-  <title>Lumora Skin</title>
-</head>
-<body style="font-family: Arial; text-align:center; padding:50px;">
-  <h1>Lumora Skin</h1>
-  <h2>Dale suavidad y luz a tu piel natural</h2>
-  <p>Crema natural para manchas y axilas oscuras</p>
-  <p>Uso solo de noche</p>
-  <h3>$25</h3>
 
-  <button style="padding:15px 25px; font-size:16px;">
-    Comprar ahora
-  </button>
-</body>
-</html>
+   export default function LumoraSkinLandingPage() {
+  return (
+    <div className="min-h-screen bg-[#f8f5f1] text-[#4b4038] font-sans">
+      {/* Hero Section */}
+      <section className="relative overflow-hidden px-6 py-20 md:px-16 lg:px-24">
+        <div className="absolute top-0 left-0 w-72 h-72 bg-[#e9dfd3] rounded-full blur-3xl opacity-40" />
+        <div className="absolute bottom-0 right-0 w-96 h-96 bg-[#d8c7b5] rounded-full blur-3xl opacity-30" />
+
+        <div className="relative z-10 max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+          <div>
+            <span className="inline-block px-4 py-2 rounded-full bg-white shadow text-sm tracking-wide uppercase mb-6">
+              Lumora Skin
+            </span>
+
+            <h1 className="text-5xl md:text-6xl font-bold leading-tight mb-6">
+              Dale suavidad y luz a tu piel natural
+            </h1>
+
+            <p className="text-lg leading-relaxed text-[#6b5f56] mb-8 max-w-xl">
+              Nuestra crema aclaradora con ingredientes naturales ayuda a mejorar la apariencia de manchas oscuras en axilas, codos, rodillas y zonas íntimas visibles, dejando una piel más uniforme, suave y luminosa. Recomendada para uso nocturno.
+            </p>
+
+            <div className="flex flex-wrap gap-4">
+              <button className="px-8 py-4 rounded-2xl bg-[#4b4038] text-white shadow-lg hover:scale-105 transition-transform">
+                Comprar Ahora
+              </button>
+
+              <button className="px-8 py-4 rounded-2xl border border-[#b8a89a] bg-white hover:bg-[#f3eee8] transition-colors">
+                Ver Beneficios
+              </button>
+            </div>
+          </div>
+
+          <div className="flex justify-center">
+            <div className="bg-white p-8 rounded-[2rem] shadow-2xl w-[320px] md:w-[380px]">
+              <div className="aspect-square rounded-[2rem] bg-gradient-to-br from-[#efe5db] to-[#d7c4b2] flex items-center justify-center shadow-inner">
+                <div className="text-center">
+                  <div className="w-32 h-32 rounded-3xl bg-white shadow-xl mx-auto mb-6 flex items-center justify-center">
+                    <span className="text-2xl font-bold tracking-widest text-[#4b4038]">
+                      LUMORA
+                    </span>
+                  </div>
+                  <p className="uppercase tracking-[0.3em] text-sm text-[#6b5f56]">
+                    Skin Cream
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Benefits */}
+      <section className="px-6 py-20 md:px-16 lg:px-24 bg-white">
+        <div className="max-w-6xl mx-auto text-center mb-14">
+          <h2 className="text-4xl font-bold mb-4">¿Por qué elegir Lumora Skin?</h2>
+          <p className="text-[#6b5f56] text-lg max-w-2xl mx-auto">
+            Fórmula diseñada para ayudarte a sentirte más segura y cómoda con tu piel.
+          </p>
+        </div>
+
+        <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+          {[
+            {
+              title: 'Aclara manchas',
+              desc: 'Ayuda a mejorar el tono desigual y las zonas oscuras visibles.'
+            },
+            {
+              title: 'Piel suave',
+              desc: 'Hidrata y deja una sensación sedosa en la piel.'
+            },
+            {
+              title: 'Uso nocturno',
+              desc: 'Recomendada para aplicar únicamente por las noches para mejores resultados.'
+            }
+          ].map((item, index) => (
+            <div
+              key={index}
+              className="bg-[#f8f5f1] p-8 rounded-3xl shadow-sm hover:shadow-xl transition-shadow"
+            >
+              <div className="w-14 h-14 rounded-2xl bg-[#d9c8b7] mb-6" />
+              <h3 className="text-2xl font-semibold mb-3">{item.title}</h3>
+              <p className="text-[#6b5f56] leading-relaxed">{item.desc}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* Product Section */}
+      <section className="px-6 py-20 md:px-16 lg:px-24">
+        <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-14 items-center">
+          <div className="bg-white rounded-[2rem] p-10 shadow-xl">
+            <div className="aspect-square rounded-[2rem] bg-gradient-to-br from-[#e8ddd1] to-[#cdb9a5] flex items-center justify-center">
+              <div className="w-40 h-40 rounded-[2rem] bg-white shadow-2xl flex items-center justify-center">
+                <span className="text-3xl font-bold text-[#4b4038]">L</span>
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <h2 className="text-4xl font-bold mb-6">
+              Un solo producto. Resultados visibles.
+            </h2>
+
+            <p className="text-lg text-[#6b5f56] leading-relaxed mb-8">
+              Lumora Skin fue creada pensando en mujeres que desean mejorar la apariencia de áreas oscuras con una fórmula elegante, moderna y fácil de usar.
+            </p>
+
+            <div className="space-y-5">
+              {[
+                'Ideal para axilas, codos y rodillas',
+                'Textura ligera y rápida absorción',
+                
+                'Ingredientes naturales y textura suave'
+              ].map((text, index) => (
+                <div key={index} className="flex items-center gap-4">
+                  <div className="w-4 h-4 rounded-full bg-[#b89d84]" />
+                  <span className="text-lg">{text}</span>
+                </div>
+              ))}
+            </div>
+
+            <div className="mt-10 space-y-4">
+              <div className="bg-[#f3ebe3] p-5 rounded-2xl inline-block">
+                <p className="text-3xl font-bold text-[#4b4038]">$25</p>
+                <p className="text-[#6b5f56]">+ $10 de envío</p>
+              </div>
+
+              <div>
+                <button className="px-8 py-4 rounded-2xl bg-[#4b4038] text-white shadow-lg hover:scale-105 transition-transform">
+                  Ordenar Lumora Skin
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Testimonials */}
+      <section className="px-6 py-20 md:px-16 lg:px-24 bg-white">
+        <div className="max-w-6xl mx-auto text-center mb-14">
+          <h2 className="text-4xl font-bold mb-4">Lo que dicen nuestras clientas</h2>
+          <p className="text-[#6b5f56] text-lg">
+            Mujeres que aman sentirse seguras con Lumora Skin.
+          </p>
+        </div>
+
+        <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+          {[
+            'Mi piel se siente mucho más suave y uniforme.',
+            'El empaque se ve súper elegante y moderno.',
+            'La uso todos los días y me encanta cómo se siente.'
+          ].map((quote, index) => (
+            <div key={index} className="bg-[#f8f5f1] p-8 rounded-3xl shadow-sm">
+              <div className="text-5xl mb-4 text-[#c6b3a1]">“</div>
+              <p className="text-[#5d5148] leading-relaxed text-lg">{quote}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* CTA */}
+      <section className="px-6 py-24 md:px-16 lg:px-24">
+        <div className="max-w-5xl mx-auto bg-[#4b4038] rounded-[3rem] p-12 md:p-16 text-center text-white shadow-2xl">
+          <h2 className="text-4xl md:text-5xl font-bold mb-6">
+            Descubre tu brillo natural
+          </h2>
+
+          <p className="text-lg text-[#e7ddd5] max-w-2xl mx-auto mb-10">
+            Lumora Skin combina elegancia, cuidado y confianza en un solo producto.
+          </p>
+
+          <a
+            href="https://wa.me/15551234567?text=Hola%20quiero%20comprar%20Lumora%20Skin%20-%20$25%20+%20$10%20envio"
+            target="_blank"
+            className="px-10 py-5 rounded-2xl bg-white text-[#4b4038] text-lg font-semibold hover:scale-105 transition-transform shadow-xl inline-block"
+          >
+            Comprar por WhatsApp
+          </a>
+        </div>
+      </section>
+
+      {/* Order Section */}
+      <section className="px-6 py-20 md:px-16 lg:px-24 bg-white">
+        <div className="max-w-3xl mx-auto text-center mb-10">
+          <h2 className="text-4xl font-bold mb-4">Ordena tu Lumora Skin</h2>
+          <p className="text-[#6b5f56]">Completa tus datos y te contactaremos por WhatsApp para confirmar tu pedido.</p>
+        </div>
+
+        <div className="bg-[#f8f5f1] p-8 rounded-3xl shadow-md max-w-2xl mx-auto space-y-4">
+          <input className="w-full p-4 rounded-xl border" placeholder="Nombre completo" />
+          <input className="w-full p-4 rounded-xl border" placeholder="Teléfono" />
+          <input className="w-full p-4 rounded-xl border" placeholder="Dirección" />
+          <input className="w-full p-4 rounded-xl border" placeholder="Cantidad (ej: 1)" />
+
+          <a
+            href="https://wa.me/15551234567?text=Hola%20quiero%20ordenar%20Lumora%20Skin%20$25%20+%20$10%20envio"
+            target="_blank"
+            className="block text-center px-6 py-4 rounded-2xl bg-[#4b4038] text-white font-semibold hover:scale-105 transition-transform"
+          >
+            Confirmar por WhatsApp
+          </a>
+        </div>
+      </section>
+
+      {/* Payments Section */}
+      <section className="px-6 py-20 md:px-16 lg:px-24 bg-[#f8f5f1]">
+        <div className="max-w-4xl mx-auto text-center">
+          <h2 className="text-4xl font-bold mb-4">Pago seguro</h2>
+          <p className="text-[#6b5f56] mb-10">
+            Completa tu compra de forma rápida y segura.
+          </p>
+
+          <div className="bg-white p-8 rounded-3xl shadow-md space-y-6">
+            <div>
+              <p className="text-lg font-semibold mb-2">Pago con tarjeta (Stripe)</p>
+              <p className="text-[#6b5f56] mb-4">
+                Activa Stripe para aceptar pagos reales con tarjeta en tu tienda.
+              </p>
+              <a
+                href="#"
+                className="inline-block px-8 py-4 rounded-2xl bg-[#4b4038] text-white font-semibold opacity-60 cursor-not-allowed"
+              >
+                Conectar pagos con tarjeta
+              </a>
+            </div>
+
+            <div className="border-t pt-6">
+              <p className="text-lg font-semibold mb-2">Compra directa (WhatsApp)</p>
+              <a
+                href="https://wa.me/15551234567?text=Hola%20quiero%20comprar%20Lumora%20Skin%20($25%20+%2010%20envio)"
+                target="_blank"
+                className="inline-block px-8 py-4 rounded-2xl border border-[#4b4038] text-[#4b4038] font-semibold hover:bg-[#4b4038] hover:text-white transition-colors"
+              >
+                Finalizar compra por WhatsApp
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Footer */}
+      <footer className="border-t border-[#e4d8cb] px-6 py-8 text-center text-[#7a6d63] bg-[#f8f5f1]">
+        <p>© 2026 Lumora Skin. Todos los derechos reservados.</p>
+      </footer>
+    </div>
+  );
+}
